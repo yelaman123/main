@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang = "eg">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Harmony Interior</title>
+  <style>
+    body {
+      background-color: #EDEDED;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #F5F5F5;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #555555;
+    }
+
+    .board {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #AAAAAA;
+      color: #555555;
+      font-size: 30px;
+      height: 80px;
+      cursor: pointer;
+    }
+
+    .cell:hover {
+      background-color: #CCCCCC;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555555;
+    }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:50px;
+        }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="main.html">Harmony Interior</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+              <li class="nav-item">
+                <a href="main.html" class="nav-link" >Catalog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about us1.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="GamePage.html">Game</a>
+              </li>
+              </ul>
+              <button type="button" class="btn btn-outline-success"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" onclick="audio.play()">Play
+                <script>                 
+                  var audio = new Audio();
+                  audio.src = 'sound.mp3';
+                  var playButton = document.getElementById('play-button');
+                  playButton.addEventListener('click', function() {
+                  audio.play();
+                  });</script></button>
+                
+<button type="button" class="btn btn-outline-danger"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" onclick="audio.pause()">Pause
+        <script> var pauseButton = document.getElementById('pause-button');
+                  pauseButton.addEventListener('click', function() {
+                  audio.pause();
+                  });
+                </script>
+                </button>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Sign in</a></li>
+                    <li><a class="dropdown-item" href="#">Log in</a></li>
+                    <li><a class="dropdown-item" href="#">Favourites</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg></i></a>
+                    <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header bg-dark text-white">
+                              <h5 class="modal-title fs-5" id="exampleModalLabel">Cart</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td><img src="30035%20(4).jpg" alt=""></td>
+                                        <td>Visualisation+</td>
+                                        <td>90.99$</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td><img src="10035%20(3).jpg" alt=""></td>
+                                        <td>Supervision+</td>
+                                        <td>220.99$</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td><img src="20035%20(2).jpg" alt=""></td>
+                                        <td>Turn-key Design</td>
+                                        <td>450.99$</td>
+                                        <td>1</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Buy</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </ul>
+          </div>
+        </div>
+      </nav>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+      <div class="cell" onclick="makeMove(0, 0)"></div>
+      <div class="cell" onclick="makeMove(0, 1)"></div>
+      <div class="cell" onclick="makeMove(0, 2)"></div>
+      <div class="cell" onclick="makeMove(1, 0)"></div>
+      <div class="cell" onclick="makeMove(1, 1)"></div>
+      <div class="cell" onclick="makeMove(1, 2)"></div>
+      <div class="cell" onclick="makeMove(2, 0)"></div>
+      <div class="cell" onclick="makeMove(2, 1)"></div>
+      <div class="cell" onclick="makeMove(2, 2)"></div>
+    </div>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    var currentPlayer = 'X';
+    var board = [
+      ['', '', ''],
+      ['', '', ''],
+      ['', '', '']
+    ];
+
+    var winCombinations = [
+      [[0, 0], [0, 1], [0, 2]],
+      [[1, 0], [1, 1], [1, 2]],
+      [[2, 0], [2, 1], [2, 2]],
+      [[0, 0], [1, 0], [2, 0]],
+      [[0, 1], [1, 1], [2, 1]],
+      [[0, 2], [1, 2], [2, 2]],
+      [[0, 0], [1, 1], [2, 2]],
+      [[0, 2], [1, 1], [2, 0]]
+    ];
+
+    var messageElement = document.getElementById('message');
+
+    function makeMove(row, col) {
+      if (board[row][col] === '') {
+        board[row][col] = currentPlayer;
+        document.getElementsByClassName('cell')[row * 3 + col].textContent = currentPlayer;
+        checkWin();
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      }
+    }
+
+    function checkWin() {
+      for (var i = 0; i < winCombinations.length; i++) {
+        var combo = winCombinations[i];
+        var [a, b, c] = combo;
+
+        if (
+          board[a[0]][a[1]] === currentPlayer &&
+          board[b[0]][b[1]] === currentPlayer &&
+          board[c[0]][c[1]] === currentPlayer
+        ) {
+          messageElement.textContent = 'Congratulations! You won! Use promo code "WINNER10" for 10% off in our store.';
+          disableBoard();
+          return;
+        }
+      }
+
+      if (isBoardFull()) {
+        messageElement.textContent = 'It\'s a draw! Try again.';
+        disableBoard();
+      }
+    }
+
+    function isBoardFull() {
+      for (var row = 0; row < board.length; row++) {
+        for (var col = 0; col < board[row].length; col++) {
+          if (board[row][col] === '') {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+
+    function disableBoard() {
+      var cells = document.getElementsByClassName('cell');
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].removeAttribute('onclick');
+      }
+    }
+  </script>
+ <div class="center">
+   <button type="button" class="btn btn-secondary btn-sm" onclick="reloadPage()">Try again!</button>
+</div>
+
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+
+
+</script>
+
+</body>
+</html>
